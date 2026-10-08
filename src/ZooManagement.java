@@ -1,10 +1,12 @@
 import java.util.Scanner ;
 
 public class ZooManagement {
+    /*
     // Prosit 1
     private int nbCages ;
-    private String zooName ;
+    private String zooName ; */
     public static void main (String[] args) {
+        /*
         ZooManagement zoo = new ZooManagement() ;
         Scanner sc = new Scanner(System.in) ;
         do {
@@ -19,6 +21,9 @@ public class ZooManagement {
 
         System.out.println (zoo.zooName + " have " + zoo.nbCages + " cages");
 
+
+       End_Posit1 */
+
         //Prosit 2
         /* Instruction 5 */
         Animal lion = new Animal() ;
@@ -29,9 +34,11 @@ public class ZooManagement {
         lion.age = 7 ;
         lion.isMammal = true ;
 
+        /*
         myZoo.name = "Friguia" ;
         myZoo.city = "Tunis" ;
         myZoo.nbrCages = 50 ;
+        */
 
         /* Instruction 6 */
         Animal tiger = new Animal("Felidae" , "Tigress" , 7 , true) ;
@@ -44,11 +51,38 @@ public class ZooManagement {
         Animal wolf = new Animal("Canidae", "Loup gris", 5, true);
 
         /* Instruction 8 */
-        myZoo.displayZoo();
-        System.out.println(myZoo);
-        System.out.println(myZoo.toString());
+        // myZoo.displayZoo();
+        // System.out.println(myZoo);
+        // System.out.println(myZoo.toString());
 
         /* Instruction 9 */
-        System.out.println(lion);
+        // System.out.println(lion);
+
+        //Prosit 3
+        /* Instruction 10 */
+        myZoo.addAnimal(lion);
+        myZoo.addAnimal(tiger);
+        myZoo.addAnimal(elephant);
+        myZoo.addAnimal(eagle);
+        myZoo.addAnimal(crocodile);
+        myZoo.addAnimal(wolf);
+        for (int i = 0 ; i <20 ; i++) {
+            System.out.println(myZoo.addAnimal(lion));
+        }
+
+        /* Instruction 11 */
+        myZoo.displayAnimals();
+        System.out.println(myZoo.searchAnimal(lion)); //The index of first lion found
+
+        /* Instruction 13 */
+        if (myZoo.removeAnimal(tiger)){
+            System.out.println("Animal successfully removed");
+        }
+        System.out.println("New list : ");
+        myZoo.displayAnimals();
+
+        /* Instruction 15 */
+        myZoo.isZooFull();
+        System.out.println("The zoo with the most animals is : " + Zoo.comparerZoo(myZoo,myzoo2));
     }
 }
