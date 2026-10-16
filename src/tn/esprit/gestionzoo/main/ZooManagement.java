@@ -1,3 +1,8 @@
+package tn.esprit.gestionzoo.main;
+
+import tn.esprit.gestionzoo.entities.Animal;
+import tn.esprit.gestionzoo.entities.Zoo;
+
 import java.util.Scanner ;
 
 public class ZooManagement {
@@ -29,10 +34,10 @@ public class ZooManagement {
         Animal lion = new Animal() ;
         Zoo myZoo = new Zoo() ;
 
-        lion.family = "Felidae" ;
-        lion.name = "Simba" ;
-        lion.age = 7 ;
-        lion.isMammal = true ;
+        lion.setFamily("Felidae") ;
+        lion.setName("Simba") ;
+        lion.setAge(7) ;
+        lion.setMammal(true) ;
 
         /*
         myZoo.name = "Friguia" ;
@@ -42,7 +47,7 @@ public class ZooManagement {
 
         /* Instruction 6 */
         Animal tiger = new Animal("Felidae" , "Tigress" , 7 , true) ;
-        Zoo myzoo2 = new Zoo("Belvedere" , "Tunis" , 55) ;
+        Zoo myzoo2 = new Zoo("Belvedere" , "Tunis" /*, 55 */) ;
 
         /* Instruction 7 */
         Animal elephant = new Animal("Elephantidae", "Éléphant d'Afrique", 12, false);
