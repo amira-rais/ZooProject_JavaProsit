@@ -93,7 +93,7 @@ public class ZooManagement {
         Terrestrial t = new Terrestrial("Felidae", "Tigresse", 2, true, 4) ;
         System.out.println( t.toString() ) ;
 
-        Aquatic q = new Aquatic("Spheniscidae", "Pingu", 2, false, "mer") ;
+        Aquatic q = new Penguin("Spheniscidae", "Pingu", 2, false, "mer", 17) ;
         System.out.println( q.toString() ) ;
 
         Penguin p = new Penguin("Spheniscidae", "Pingu", 2, false, "ocean", 20) ;
@@ -102,9 +102,21 @@ public class ZooManagement {
         Dolphin d = new Dolphin("Delphinidae", "Dolph", 2, true, "mer", 15) ;
         System.out.println( d.toString() ) ;
 
-
-        q.swim();
+        /* q.swim();
         p.swim();
-        d.swim();
+        d.swim(); */
+
+        Aquatic ad = new Dolphin("Delphinidae", "Dolph", 2, true, "mer", 15) ;
+        //Prosit 6
+        myZoo.addAquaticAnimals(p);
+        myZoo.addAquaticAnimals(ad);
+        myZoo.addAquaticAnimals(q);
+        myZoo.addAquaticAnimals(p);
+        myZoo.addAquaticAnimals(d);
+        for (int i = 0; i<myZoo.getCompteuraqua(); i++)
+            myZoo.aquaticAnimals[i].swim() ;
+        //Remarque : Meme les instances des classes filles de la classe Aquatic peuvent etres ajoutees dans le tableau aquaticAnimals
+
+        System.out.println( d.equals(ad) ) ;
     }
 }

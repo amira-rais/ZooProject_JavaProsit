@@ -151,4 +151,39 @@ public class Zoo {
             return z2 ;
         }
     }
+
+    //Prosit 6
+    public Aquatic [] aquaticAnimals = new Aquatic[10] ;
+    int compteuraqua = 0 ;
+
+    public int getCompteuraqua() {
+        return compteuraqua;
+    }
+
+    public void addAquaticAnimals (Aquatic aquatic) {
+        aquaticAnimals [compteuraqua] = aquatic ;
+        compteuraqua++ ;
+    }
+
+    public float maxPenguinSwimmingDepth () {
+        float max = 0;
+        for (int i = 0; i<compteuraqua; i++) {
+            if ( aquaticAnimals[i] instanceof Penguin )
+                if (max < ((Penguin) aquaticAnimals[i]).getSwimmingDepth())
+                    max = ((Penguin) aquaticAnimals[i]).getSwimmingDepth() ;
+        }
+        return max ;
+    }
+
+    public void displayNumberOfAquaticsByType () {
+        int nbrpeng = 0 ;
+        int nbrdolph = 0 ;
+        for (int i = 0; i<compteuraqua; i++) {
+            if (aquaticAnimals[i] instanceof Penguin)
+                nbrpeng++;
+            if (aquaticAnimals[i] instanceof Dolphin)
+                nbrdolph++;
+        }
+        System.out.println("There are " + nbrdolph + " dolphins and " + nbrpeng + " penguins in this zoo");
+    }
 }
